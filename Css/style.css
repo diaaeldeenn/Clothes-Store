@@ -1,0 +1,1008 @@
+/* #Header
+#Nav
+#Section
+#Footer */
+
+
+
+
+
+
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.html{
+  scroll-behavior: smooth;
+}
+
+
+body{
+  font-family: 'Cairo', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Work Sans', sans-serif;
+  background-color: rgb(233, 198, 233);
+  /* background-color: black; */
+}
+
+
+.main-heading{
+  text-align: center;
+}
+
+.main-heading h2{
+  font-weight: 600;
+  font-size: 30px;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  transition: 1s;
+  color: #f95656;
+}
+
+.main-heading h2:hover{
+  font-style: italic;
+  margin-left: 4px;
+  cursor: pointer;
+  color:#A459D1 ;
+}
+
+.main-heading p{
+  margin: 0 auto 100px;
+  width: 550px;
+  font-weight: 500;
+  color: #973578;
+  max-width: 100%;
+  cursor: pointer;
+  text-shadow:2px 0px 5px #1917765e;
+}
+
+.main-heading p:hover{
+  color:#f95656 ;
+}
+
+
+ul {
+  list-style: none;
+}
+
+
+.container{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* @media (min-width: 200px) and (max-width: 440px) {
+} */
+
+@media (max-width: 450px) {
+  .container{
+    width: 350px;
+}
+}
+
+
+/* @media (min-width: 500px) {
+} */
+
+@media (min-width: 768px) {
+  .container{
+    width: 750px;
+  }
+  }
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container{
+    width: 1170px;
+  }
+}
+
+
+
+/* ----------------------------------- Header ------------------------------ */
+
+/* عشان اخلي الهيدر شفاف قدام الصوره */
+header{
+  background-color: #F5EAEA;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+
+header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 97px;
+}
+
+/* الخط ال تحت الهيد */
+header .container::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 30px);
+  height: 1px;
+  left: 15px;
+  background-color: #a2a2a2;
+}
+
+header .container .logo i{
+  height: 40px;
+}
+
+header .container .logo{
+  text-decoration: none;
+  font-weight: 900;
+  color: #F16767;
+}
+
+header nav .toggle-menu{
+  color: #F16767;
+  font-size: 22px;
+}
+
+@media (min-width:768px) {
+  header nav .toggle-menu{
+    display: none;
+  }
+}
+
+header .container nav{
+  /* عشان اخد حجم الهيدر كله */
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header .container nav ul{
+  display: flex;
+}
+
+@media (max-width:767px) {
+  header .container nav ul{
+    display: none;
+  }
+  header .container nav .toggle-menu:hover + ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f1676742;
+  }
+  header nav .toggle-menu:hover + ul li a{
+    padding: 15px;
+  }
+}
+
+header .container nav ul li a{
+  display: block;
+  color: #F16767;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+  /* عشان اخلي مسافه بينهم */
+  padding: 40px 20px;
+  position: relative;
+  z-index: 3;
+}
+
+header .container nav ul li a.Home,
+header .container nav ul li a:hover{
+  color:#A459D1 ;
+  border-bottom: 2px solid #A459D1;
+}
+
+
+header nav .form{
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin-left: 30px;
+  border-left: 1px solid #A459D1;
+}
+
+header nav .form i{
+  position: absolute;
+  font-size: 20px;
+  top: 25%;
+  transform: translate(-50%);
+  right: 0;
+}
+
+
+
+/*------------------------------ landing ------------------------------------- */
+
+.landing{
+  min-height: 100vh;
+  background-image: url(../image/landing.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+
+/* الطبقه الشفافه على الصور */
+.landing .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.308);
+}
+
+.landing .text{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 50%;
+  padding: 50px;
+  background-color: #f16767;
+  color: #370654;
+}
+
+@media (max-width: 767px) {
+  .landing .text{
+    width: 100%;
+  }
+}
+
+.landing .text h2{
+  font-weight: 900;
+}
+
+
+.landing .text p{
+  font-weight: 600;
+}
+
+
+/* ------------------------------- Services ---------------------------------*/
+
+.services{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media (min-width: 768px) {
+  .services .services-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
+    gap: 10px;
+  }
+}
+
+.services .srv-box{
+  display: flex;
+  margin-bottom: 75px;
+}
+
+
+@media (max-width:767px){
+  .services .srv-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .services .services-container i{
+    margin-left: 50px;
+    margin-bottom: 15px;
+  }
+}
+
+
+.services .services-container i{
+  margin-right: 50px;
+}
+
+
+.services .services-container h3{
+  margin-bottom: 20px;
+  color: #f95656;
+  font-weight: 800;
+}
+
+.services .services-container p{
+  color: #973578;
+  font-weight: 600;
+}
+
+
+/*------------------------------- Design ------------------------------- */
+
+.design{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: 600px;
+  position: relative;
+  background-image: url(../image/design.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  overflow: hidden;
+  opacity: 0.96;
+}
+
+.design:hover{
+  opacity: 1;
+}
+
+.design .blur{
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.705);
+  justify-content: center;
+  align-items: center;
+}
+
+.design .blur .text{
+  background-color: #f16767;
+  color: #370654;
+  min-width: 50%;
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%)
+}
+
+.design .blur .text h2{
+  margin-bottom: 30px;
+}
+
+.design .blur .text ul li{
+  margin-bottom: 20px;
+  text-align: justify;
+  font-weight: 600;
+}
+
+/* ' */
+.design .blur .text ul li::before{
+  font-family: 'Font Awesome 5 Free';
+  content: '\f521';
+  font-weight: 900;
+  margin-right: 20px;
+}
+
+
+/*------------------------------------ Portfolio -------------------------------- */
+
+.Portfolio{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.Portfolio .shuffle{
+  display: flex;
+  justify-content: center;
+}
+
+.Portfolio .shuffle li{
+  padding: 10px;
+  color: #f95656;
+  cursor: pointer;
+}
+
+.Portfolio .shuffle .active{
+  background-color:#A459D1 ;
+  color: #F5EAEA;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.Portfolio .shuffle .active:hover{
+  background-color: #f16767;
+}
+
+
+.Portfolio .imgs-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+
+.Portfolio .imgs-container .box{
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@media (min-width:768px){
+  .Portfolio .imgs-container .box{
+    flex-basis: 25%;
+  }
+}
+
+@media (max-width:767px){
+  .Portfolio .imgs-container .box{
+    flex-basis: 100%;
+  }
+}
+
+
+.Portfolio .imgs-container .box img{
+  /* عشان الصوره متطلعش بره المحتوى */
+  width: 100%;
+  transition: 0.3s;
+}
+
+.Portfolio .imgs-container .box .caption{
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  padding: 20px;
+  transition: 0.3s;
+  background-color: rgb(233, 198, 233);
+}
+
+
+.Portfolio .imgs-container .box:hover .caption{
+  bottom: 0;
+}
+
+.Portfolio .imgs-container .box:hover img{
+  transform: rotate(3deg) scale(1.1);
+}
+
+.Portfolio .imgs-container .box .caption h4{
+  margin-bottom: 10px;
+  color: #3f0e5a;
+  font-weight: 700;
+}
+
+.Portfolio .imgs-container .box .caption p{
+  font-weight: 500;
+  color: #f34242;
+}
+
+.more{
+  background-color:#A459D1 ;
+  color: #F5EAEA;
+  padding: 15px 20px;
+  text-decoration: none;
+  margin: 30px auto;
+  width: fit-content;
+  display: block;
+  transition: 0.3s;
+}
+
+.more:hover{
+  background-color: #f16767;
+}
+
+
+
+/*------------------------------------ Video ---------------------------------- */
+
+/* .Video{
+  position: relative;
+}
+
+
+.Video video{
+  width: 100%;
+}
+
+.Video::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0 0 0 / 40%);
+}
+
+.Video .text{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  background-color: rgba(233, 198, 233, 0.288);
+  color: #e44d4d;
+  text-align: center;
+}
+
+.Video .text h2{
+  font-weight: 900;
+  margin: 0 0 30px;
+}
+
+.Video .text p{
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.Video .text button{
+  background-color: #804c9e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+} */
+
+/*------------------------------------ About ----------------------------------  */
+
+
+
+
+
+
+/*-------------------------------------- Our Skills --------------------------------*/
+
+.our-skills{
+  padding-top: 100px;
+  padding-bottom: 100px;
+} 
+
+
+.our-skills .container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (min-width:992px) {
+  .our-skills .container > div{
+    flex-basis: 45%;
+  }
+}
+
+
+.our-skills .container > div > h3{
+  margin: 0 0 30px;
+  font-weight: 600;
+  text-align: center;
+  color: #f95656;
+}
+
+@media (max-width: 767px) {
+  .our-skills .container > div > h3{
+    margin-left: 29px;
+  }
+
+  .our-skills .container > div > p{
+    margin-left: 5px;
+  }
+  .prog{
+    width: 115%;
+  }
+}
+
+
+.our-skills .container > div > p{
+  color:#7b00c5 ;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+
+.our-skills .TESTIMONIALS .content{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+
+.our-skills .TESTIMONIALS .content img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+
+@media (max-width: 767px){
+  .our-skills .TESTIMONIALS .content{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .our-skills .TESTIMONIALS .content img{
+    margin: 0 auto 20px;
+  }
+}
+
+
+
+.our-skills .TESTIMONIALS .text{
+  border-bottom: 1px solid #918989;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+
+.our-skills .TESTIMONIALS .text p{
+  text-align: right;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.our-skills .TESTIMONIALS .boll{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+.our-skills .TESTIMONIALS .boll li{
+  width: 14px;
+  height: 14px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.our-skills .TESTIMONIALS .boll li.active{
+  background-color: #f95656;
+  border: none;
+}
+
+
+.our-skills .skills .prog-holder{
+  margin-bottom: 50px;
+}
+
+
+.our-skills .skills .prog-holder h4{
+  margin-bottom: 15px;
+}
+
+
+.prog{
+  height: 30px;
+  background-color: #fffcfe;
+}
+
+.our-skills .skills .prog-holder .prog span{
+  display: block;
+  height: 100%;
+  background-color: #f95656;
+}
+
+
+/*------------------------------ Subscribe ------------------------------------- */
+
+
+.Subscribe{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(../image/Subs.jpg);
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+.Subscribe::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0 0 0 / 80%);
+}
+
+.Subscribe .container{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+@media (max-width: 800px) {
+  .Subscribe .container{
+    flex-direction: column;
+  }
+}
+
+
+.Subscribe form{
+  display: flex;
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+}
+
+
+.Subscribe form i{
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f9565699;
+}
+
+
+.Subscribe form input[type="email"]{
+  border: 1px solid white;
+  /* عشان بوكس الايميل يبقى شفاف */
+  background: none;
+  padding: 20px 20px 20px 60px;
+  /* لون التايبينج */
+  caret-color: #f95656;
+  width: calc(100% - 130px);
+  border-right: transparent;
+  color: white;
+}
+
+
+
+.Subscribe form input[type="submit"]{
+  width: 130px;
+  background-color: #f95656;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-left: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Subscribe form input[type="submit"]:hover{
+  background-color: #804c9e;
+}
+
+.Subscribe form ::placeholder{
+  color: #f9565699;
+}
+
+.Subscribe form input[type="email"]:focus,
+.Subscribe form input[type="submit"]:focus {
+  outline: none;
+}
+
+
+.Subscribe .container p{
+  font-weight: 500;
+  color: #f95656;
+  margin-left: 50px;
+}
+
+
+
+@media (max-width:991px) {
+  .Subscribe .container p{
+    margin: 30px 0 0;
+  }
+  .Subscribe form input[type="email"]:focus,
+.Subscribe form input[type="submit"]:focus{
+  outline: none;
+}
+}
+
+
+
+/*------------------------------ Contact Us  ----------------------------------*/
+.contact{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.contact .content{
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .contact .content{
+    flex-direction: column;
+  }
+}
+
+.contact .content form{
+  /* العرض */
+  flex-basis: 70%;
+}
+
+.contact .content form .main-input{
+  padding: 20px;
+  /* عشان يجوا تحت بعض */
+  display: block;
+  border: 1px solid #5f1c85;
+  margin-bottom: 30px;
+  width: 100%;
+  background-color: rgb(233 198 233);
+}
+
+.contact .content form .main-input:focus{
+  outline: none;
+}
+
+.contact .content form textarea.main-input{
+  height: 200px;
+}
+
+.contact .content form input[type="submit"]{
+  display: flex;
+  /* العنصر يبقى على اليمين خالص */
+  margin-left: auto;
+  padding: 20px;
+  border: none;
+  background-color: #f95656;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact .content form input[type="submit"]:hover{
+  background-color: #804c9e;
+}
+
+
+
+.contact .content .info{
+  flex-basis: 25%;
+}
+
+@media (max-width: 767px) {
+  .contact .content .info{
+    order: -1;
+    text-align: center;
+
+  }
+}
+
+
+.contact .content .info h4{
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #5f1c85;
+}
+
+
+.contact .content .info .phone{
+  display: block;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+
+.contact .content .info h4:nth-of-type(2){
+  margin-top: 90px;
+  color: #5f1c85;
+}
+
+@media (max-width: 767px) {
+  .contact .content .info h4:nth-of-type(2){
+    margin-top: 30px;
+  }
+}
+
+
+.contact .content .info address{
+  color: #777;
+  line-height: 2;
+}
+
+
+@media (max-width: 767px) {
+  .contact .content .info address{
+    margin-bottom: 40px;
+  }
+}
+
+
+
+/*---------------------------- Supporter -------------------------------------- */
+
+.supporter .container .main-heading{
+  box-shadow: 0px 0px 5px red;
+  max-width: 100%;
+  transition: 0.3s;
+}
+
+.supporter .container .main-heading:hover{
+  box-shadow: 0px 0px 5px #f95656;
+}
+
+
+.supporter .container .main-heading p{
+  color:#c3459a ;
+}
+
+
+/*--------------------------------- Footer ------------------------------------ */
+
+.footer{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url(../image/Thank.jpg);
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color: #a999a4;
+}
+
+.footer::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0 0 0 / 40%);
+}
+
+.footer .container{
+  position: relative;
+  font-weight: 800;
+}
+
+.footer .container i{
+  margin-bottom: 20px;
+}
+
+.footer p:not(.copyright){
+  padding: 20px;
+  border-bottom: 1px solid white;
+  font-weight: 600;
+  /* عشان نظبط حجم البوردر */
+  width: fit-content;
+  margin: 20px auto;
+}
+
+
+.footer .social-icons i{
+  padding: 10px;
+  color:#a39393 ;
+  transition: 0.3s;
+}
+
+.footer .social-icons i:hover{
+  color: #f95656;
+}
+
+
+.footer .copyright{
+  margin-top: 60px;
+}
+
+
+.footer .copyright span{
+  font-weight: 900;
+  color: #f95656;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.footer .copyright span:hover{
+  color: #9b51c4;
+}
